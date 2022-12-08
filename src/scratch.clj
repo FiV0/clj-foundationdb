@@ -1,5 +1,8 @@
 (ns scratch
-  (:gen-class))
+  (:import (com.apple.foundationdb Database FDB)
+           (com.apple.foundationdb.tuple Tuple)))
 
-(defn -main [& args]
-  (println "Hello from Clojure!!! " args))
+(def api-version 620)
+(def fdb (FDB/selectAPIVersion api-version))
+
+(def db (.open fdb))

@@ -1,7 +1,9 @@
 {:paths ["src" "resources"]
 
  :deps
- {org.clojure/clojure {:mvn/version "1.11.1"}}
+ {org.clojure/clojure       {:mvn/version "1.11.1"}
+  org.foundationdb/fdb-java {:mvn/version "6.3.23"}
+  me.vedang/clj-fdb         {:mvn/version "0.3.0"}}
 
  :aliases
  {:dev
